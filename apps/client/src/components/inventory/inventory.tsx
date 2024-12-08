@@ -1,0 +1,298 @@
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAppSelector, useAppDispatch } from '@/hooks/use-redux-types'
+import { getInventoryByUser, createInventoryItem, updateInventoryItem } from '@/lib/actions/inventory-actions'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { SaveIcon, Trash2 } from 'lucide-react'
+import currencies from '@/lib/currencies.json'
+import { useToast } from '@/hooks/use-toast'
+import { InventoryItem } from '@/lib/types/inventory-types'
+
+
+const EMPTY_INVENTORY_ITEM: InventoryItem = {
+  _id: '',
+  itemName: '',
+  sku: '',
+  quantity: 0,
+  unitPrice: 0,
+  category: '',
+  threshold: 0,
+  description: ''
+}
+export default function InventoryPage() {
+  const {toast} = useToast();
+  const navigate = useNavigate()
+  const dispatch = useAppDispatch()
+  const [currency, setCurrency] = useState<string>('UGX')
+  const [inventoryData, setInventoryData] = useState<InventoryItem>(EMPTY_INVENTORY_ITEM)
+
+  const { inventoryItems } = useAppSelector((state) => state.inventory)
+  
+  // Memoize profile fetch
+  const userProfile = useMemo(() => {
+    const profile = localStorage.getItem('profile')
+    return profile ? JSON.parse(profile) : null
+  }, [])
+
+  // Memoize user ID
+  const userId = useMemo(() => {
+    return userProfile?.result?._id || userProfile?.result?.googleId
+  }, [userProfile])
+
+  // Memoize total inventory value calculation
+  const totalInventoryValue = useMemo(() => {
+    return inventoryItems.reduce((sum: number, item: InventoryItem) => {
+      return sum + ((item.quantity || 0) * (item.unitPrice || 0))
+    }, 0)
+  }, [inventoryItems])
+
+  // Memoize SKU generator
+  const generateSKU = useCallback(() => {
+    const prefix = 'ITEM';
+    const timestamp = Date.now().toString().slice(-6);
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    return `${prefix}-${timestamp}-${random}`;
+  }, [])
+
+  useEffect(() => {
+    if (userId) {
+      dispatch(getInventoryByUser({ search: userId }))
+      
+    }
+  }, [dispatch, userId])
+
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    setInventoryData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+  }, [])
+
+  const handleSubmit = useCallback((e: React.FormEvent) => {
+    e.preventDefault()
+    
+    const newItem = {
+      ...inventoryData,
+      sku: inventoryData.sku || generateSKU(),
+      creator: [userId]
+    };
+
+    if (inventoryData._id) {
+      dispatch(updateInventoryItem(newItem._id || '', newItem))
+      toast({
+        title: `${newItem.itemName} has been updated`,
+        description: "An inventory item has been successfully updated",
+      });
+    } else {
+      dispatch(createInventoryItem(newItem, navigate))
+      toast({
+        title: `${newItem.itemName} has been created`,
+        description: "A new inventory item has been successfully added",
+      });
+    }
+
+    setInventoryData(EMPTY_INVENTORY_ITEM)
+  }, [inventoryData, userId, generateSKU, dispatch, navigate, toast])
+
+  const handleEditItem = useCallback((item: InventoryItem) => {
+    setInventoryData(item)
+    window.scrollTo(0, 0)
+  }, [])
+
+  const handleDeleteItem = useCallback((id: string) => {
+    console.log('Delete item', id)
+  }, [])
+
+  const currencyOptions = useMemo(() => 
+    currencies.filter(curr => curr.value).map((curr, index) => (
+      <SelectItem 
+        key={`currency-${index}`} 
+        value={curr.value}
+      >
+        {curr.label}
+      </SelectItem>
+    ))
+  , [])
+  return (
+    <div className="container mx-auto px-4 py-8">
+    <Card>
+      <CardHeader>
+        <CardTitle>{inventoryData._id ? 'Edit Inventory Item' : 'Add New Inventory Item'}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="itemName">Item Name</Label>
+              <Input
+                id="itemName"
+                name="itemName"
+                value={inventoryData.itemName}
+                onChange={handleChange}
+                placeholder="Item name"
+              />
+            </div>
+            <div>
+              <Label htmlFor="sku">SKU</Label>
+              <Input
+                id="sku"
+                name="sku"
+                value={inventoryData.sku}
+                onChange={handleChange}
+                placeholder="SKU | Autogenerated if left empty"
+              />
+            </div>
+            <div>
+              <Label htmlFor="quantity">Quantity</Label>
+              <Input
+                id="quantity"
+                name="quantity"
+                type="number"
+                value={inventoryData.quantity}
+                onChange={handleChange}
+                placeholder="0"
+              />
+            </div>
+            <div>
+              <Label htmlFor="unitPrice">Unit Price</Label>
+              <Input
+                id="unitPrice"
+                name="unitPrice"
+                type="number"
+                value={inventoryData.unitPrice}
+                onChange={handleChange}
+                placeholder="0"
+              />
+            </div>
+            <div>
+              <Label htmlFor="category">Category</Label>
+              <Input
+                id="category"
+                name="category"
+                value={inventoryData.category}
+                onChange={handleChange}
+                placeholder="Category"
+              />
+            </div>
+            <div>
+              <Label htmlFor="threshold">Threshold</Label>
+              <Input
+                id="threshold"
+                name="threshold"
+                type="number"
+                value={inventoryData.threshold}
+                onChange={handleChange}
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div>
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              id="description"
+              name="description"
+              value={inventoryData.description}
+              onChange={handleChange}
+              placeholder="Item description"
+            />
+          </div>
+          <div className="flex justify-between items-center">
+            <div>
+              <Label>Currency</Label>
+              <Select value={currency} onValueChange={setCurrency}>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select currency" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {currencyOptions}
+                  </SelectContent>
+                </Select>
+            </div>
+            <Button type="submit">
+              <SaveIcon className="mr-2 h-4 w-4" />
+              {inventoryData._id ? 'Update Item' : 'Add Item'}
+            </Button>
+          </div>
+        </form>
+      </CardContent>
+    </Card>
+
+    <Card className="mt-8">
+      <CardHeader>
+        <CardTitle>Inventory Items</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>SKU</TableHead>
+              <TableHead>Item Name</TableHead>
+              <TableHead>Quantity</TableHead>
+              <TableHead>Unit Price</TableHead>
+              <TableHead>Category</TableHead>
+              <TableHead>Threshold</TableHead>
+              <TableHead>Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {inventoryItems.map((item: InventoryItem) => (
+              <TableRow key={item._id}>
+                <TableCell>{item.sku}</TableCell>
+                <TableCell>{item.itemName}</TableCell>
+                <TableCell>{item.quantity}</TableCell>
+                <TableCell>{currency} {item?.unitPrice?.toFixed(2)}</TableCell>
+                <TableCell>{item.category}</TableCell>
+                <TableCell>{item.threshold}</TableCell>
+                <TableCell>
+                  <div className="flex space-x-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleEditItem(item)}
+                    >
+                      Edit
+                    </Button>
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => handleDeleteItem(item?._id || "")}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        <div className="mt-4 text-right">
+          <p className="text-lg font-semibold">
+            Total Inventory Value: {currency} {totalInventoryValue.toFixed(2)}
+          </p>
+        </div>
+      </CardContent>
+    </Card>
+  </div>
+  )
+}

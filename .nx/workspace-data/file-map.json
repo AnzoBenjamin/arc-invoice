@@ -1,0 +1,746 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.0.10",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "nx.json",
+        "hash": "12320640051516242609"
+      },
+      {
+        "file": "docker-compose.prod.yml",
+        "hash": "8275532246584256634"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14193483925376016841"
+      },
+      {
+        "file": ".idea/nx-angular-config.xml",
+        "hash": "11747644467998611843"
+      },
+      {
+        "file": ".idea/accountill.iml",
+        "hash": "2091662290190038625"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.json",
+        "hash": "14058517625940204484"
+      },
+      {
+        "file": ".idea/dbnavigator.xml",
+        "hash": "17400415271435727074"
+      },
+      {
+        "file": ".nx/workspace-data/file-map.json",
+        "hash": "4167456581061127941"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "14600148892634157659"
+      },
+      {
+        "file": "libs/invoiceType.ts",
+        "hash": "14594143936496104948"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile.hash",
+        "hash": "2835120313671166546"
+      },
+      {
+        "file": ".idea/.gitignore",
+        "hash": "10286036308014790964"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.json",
+        "hash": "10607786192466619595"
+      },
+      {
+        "file": ".nx/workspace-data/d/daemon.log",
+        "hash": "13767612337345947098"
+      },
+      {
+        "file": "package.json",
+        "hash": "12568665272602820969"
+      },
+      {
+        "file": ".idea/git_toolbox_blame.xml",
+        "hash": "10563179705875868391"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "8623372044132027957"
+      }
+    ],
+    "projectFileMap": {
+      "@accountill/server": [
+        {
+          "file": "apps/server/.gitignore",
+          "hash": "2836708013400663046"
+        },
+        {
+          "file": "apps/server/Dockerfile",
+          "hash": "4375323612843004752"
+        },
+        {
+          "file": "apps/server/Procfile",
+          "hash": "12834184131396522719"
+        },
+        {
+          "file": "apps/server/controllers/clients.ts",
+          "hash": "10982448206217685475"
+        },
+        {
+          "file": "apps/server/controllers/inventory.ts",
+          "hash": "6025352598073772616"
+        },
+        {
+          "file": "apps/server/controllers/invoices.ts",
+          "hash": "15395818536461277028"
+        },
+        {
+          "file": "apps/server/controllers/profile.ts",
+          "hash": "6359139017599861052"
+        },
+        {
+          "file": "apps/server/controllers/user.ts",
+          "hash": "5734718457288851777"
+        },
+        {
+          "file": "apps/server/dist/_redirects",
+          "hash": "1043623441615875955"
+        },
+        {
+          "file": "apps/server/dist/asset-manifest.json",
+          "hash": "6704704378339803170"
+        },
+        {
+          "file": "apps/server/dist/favicon.ico",
+          "hash": "4316682113648056044"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-128x128.png",
+          "hash": "251094322681414815"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-16x16.ico",
+          "hash": "7003467229250390448"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-16x16.png",
+          "hash": "10999173347977314115"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-32x32.ico",
+          "hash": "4316682113648056044"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-32x32.png",
+          "hash": "16706203511550576768"
+        },
+        {
+          "file": "apps/server/dist/icons/icon-64x64.png",
+          "hash": "8551646186220110059"
+        },
+        {
+          "file": "apps/server/dist/index.html",
+          "hash": "12672912594839702418"
+        },
+        {
+          "file": "apps/server/dist/logo192.png",
+          "hash": "7585273181698778288"
+        },
+        {
+          "file": "apps/server/dist/logo512.png",
+          "hash": "9339365414554387981"
+        },
+        {
+          "file": "apps/server/dist/manifest.json",
+          "hash": "1447645250373428393"
+        },
+        {
+          "file": "apps/server/dist/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "apps/server/dist/static/css/main.122d638c.css",
+          "hash": "1266636825073170753"
+        },
+        {
+          "file": "apps/server/dist/static/css/main.122d638c.css.map",
+          "hash": "6273911528525967817"
+        },
+        {
+          "file": "apps/server/dist/static/js/main.9c91a91c.js",
+          "hash": "10244900237607711985"
+        },
+        {
+          "file": "apps/server/dist/static/js/main.9c91a91c.js.LICENSE.txt",
+          "hash": "6292745077122562089"
+        },
+        {
+          "file": "apps/server/dist/static/js/main.9c91a91c.js.map",
+          "hash": "13589911878447743996"
+        },
+        {
+          "file": "apps/server/documents/email.ts",
+          "hash": "17629689128229889847"
+        },
+        {
+          "file": "apps/server/documents/index.ts",
+          "hash": "16765274869974440455"
+        },
+        {
+          "file": "apps/server/documents/invoice.ts",
+          "hash": "4304001369859459820"
+        },
+        {
+          "file": "apps/server/index.ts",
+          "hash": "9233365329718196684"
+        },
+        {
+          "file": "apps/server/invoice.pdf",
+          "hash": "1417622665529522612"
+        },
+        {
+          "file": "apps/server/middleware/auth.ts",
+          "hash": "11618257850632461441"
+        },
+        {
+          "file": "apps/server/models/clientModel.ts",
+          "hash": "4340733393099802387"
+        },
+        {
+          "file": "apps/server/models/expenseModel.ts",
+          "hash": "3303452285979065245"
+        },
+        {
+          "file": "apps/server/models/inventoryModel.ts",
+          "hash": "6781030198719023137"
+        },
+        {
+          "file": "apps/server/models/invoiceModel.ts",
+          "hash": "1091596564236634966"
+        },
+        {
+          "file": "apps/server/models/profileModel.ts",
+          "hash": "12082843035994333713"
+        },
+        {
+          "file": "apps/server/models/userModel.ts",
+          "hash": "14918654741914586671"
+        },
+        {
+          "file": "apps/server/package-lock.json",
+          "hash": "13927282627823179496"
+        },
+        {
+          "file": "apps/server/package.json",
+          "hash": "1861198940271348612",
+          "deps": [
+            "npm:@types/bcryptjs",
+            "npm:@types/cors",
+            "npm:@types/express",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/node",
+            "npm:@types/nodemailer",
+            "npm:nodemon",
+            "npm:typescript",
+            "npm:bcryptjs",
+            "npm:cors",
+            "npm:dotenv@8.6.0",
+            "npm:express",
+            "npm:html-pdf",
+            "npm:jsonwebtoken",
+            "npm:moment",
+            "npm:mongoose",
+            "npm:nodemailer",
+            "npm:puppeteer"
+          ]
+        },
+        {
+          "file": "apps/server/routes/clients.ts",
+          "hash": "15171310066301122376"
+        },
+        {
+          "file": "apps/server/routes/inventory.ts",
+          "hash": "16341474030120413647"
+        },
+        {
+          "file": "apps/server/routes/invoices.ts",
+          "hash": "8240941448288030819"
+        },
+        {
+          "file": "apps/server/routes/profile.ts",
+          "hash": "6099297401393509803"
+        },
+        {
+          "file": "apps/server/routes/userRoutes.ts",
+          "hash": "5076048997146513044"
+        },
+        {
+          "file": "apps/server/tsconfig.json",
+          "hash": "12914320641978542677"
+        }
+      ],
+      "@accountill/client": [
+        {
+          "file": "apps/client/.env",
+          "hash": "4624219716588708744"
+        },
+        {
+          "file": "apps/client/.gitignore",
+          "hash": "13046175384202504187"
+        },
+        {
+          "file": "apps/client/README.md",
+          "hash": "5222898940979069107"
+        },
+        {
+          "file": "apps/client/components.json",
+          "hash": "12225174943113813965"
+        },
+        {
+          "file": "apps/client/eslint.config.js",
+          "hash": "16145672096969245511"
+        },
+        {
+          "file": "apps/client/index.html",
+          "hash": "4025202329384162906"
+        },
+        {
+          "file": "apps/client/package.json",
+          "hash": "6546522340348857374",
+          "deps": [
+            "npm:@eslint/js@9.14.0",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react-swc",
+            "npm:autoprefixer",
+            "npm:eslint@9.14.0",
+            "npm:eslint-plugin-react-hooks@5.0.0",
+            "npm:eslint-plugin-react-refresh",
+            "npm:globals@15.12.0",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:lucide-react",
+            "npm:react",
+            "npm:react-dom@18.3.1",
+            "npm:react-redux",
+            "npm:redux",
+            "npm:redux-thunk",
+            "npm:tailwind-merge",
+            "npm:tailwindcss-animate"
+          ]
+        },
+        {
+          "file": "apps/client/postcss.config.js",
+          "hash": "1121830044826443979"
+        },
+        {
+          "file": "apps/client/public/_redirects",
+          "hash": "1043623441615875955"
+        },
+        {
+          "file": "apps/client/public/favicon.ico",
+          "hash": "4316682113648056044"
+        },
+        {
+          "file": "apps/client/public/icons/icon-128x128.png",
+          "hash": "251094322681414815"
+        },
+        {
+          "file": "apps/client/public/icons/icon-16x16.ico",
+          "hash": "7003467229250390448"
+        },
+        {
+          "file": "apps/client/public/icons/icon-16x16.png",
+          "hash": "10999173347977314115"
+        },
+        {
+          "file": "apps/client/public/icons/icon-32x32.ico",
+          "hash": "4316682113648056044"
+        },
+        {
+          "file": "apps/client/public/icons/icon-32x32.png",
+          "hash": "16706203511550576768"
+        },
+        {
+          "file": "apps/client/public/icons/icon-64x64.png",
+          "hash": "8551646186220110059"
+        },
+        {
+          "file": "apps/client/public/logo192.png",
+          "hash": "7585273181698778288"
+        },
+        {
+          "file": "apps/client/public/logo512.png",
+          "hash": "9339365414554387981"
+        },
+        {
+          "file": "apps/client/public/manifest.json",
+          "hash": "1447645250373428393"
+        },
+        {
+          "file": "apps/client/public/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "apps/client/public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "apps/client/src/App.css",
+          "hash": "3739391659270974612"
+        },
+        {
+          "file": "apps/client/src/App.tsx",
+          "hash": "4045070515918818298"
+        },
+        {
+          "file": "apps/client/src/actions/auth.ts",
+          "hash": "865897510605617223"
+        },
+        {
+          "file": "apps/client/src/actions/clientActions.ts",
+          "hash": "7753150944713184821"
+        },
+        {
+          "file": "apps/client/src/actions/constants.ts",
+          "hash": "1222553742414179"
+        },
+        {
+          "file": "apps/client/src/actions/inventory_actions.ts",
+          "hash": "11121772520892787970"
+        },
+        {
+          "file": "apps/client/src/actions/invoice_actions.ts",
+          "hash": "15628666955322313031"
+        },
+        {
+          "file": "apps/client/src/actions/profile.ts",
+          "hash": "8545850235860931467"
+        },
+        {
+          "file": "apps/client/src/api/index.ts",
+          "hash": "2304504554421901226"
+        },
+        {
+          "file": "apps/client/src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "apps/client/src/clients.json",
+          "hash": "10890815826826694686"
+        },
+        {
+          "file": "apps/client/src/components/Invoices/invoices.tsx",
+          "hash": "11428937730874619721"
+        },
+        {
+          "file": "apps/client/src/components/clients/add_client.tsx",
+          "hash": "7714977397322406533"
+        },
+        {
+          "file": "apps/client/src/components/clients/client_list.tsx",
+          "hash": "13674133997458434627"
+        },
+        {
+          "file": "apps/client/src/components/clients/clients.module.css",
+          "hash": "7459635570074614964"
+        },
+        {
+          "file": "apps/client/src/components/clients/clients.tsx",
+          "hash": "3784831371163745978"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/chart.tsx",
+          "hash": "5298654963454892145"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/dashboard.module.css",
+          "hash": "8089019059811540655"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/dashboard.tsx",
+          "hash": "9375306085162858763"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/donut.tsx",
+          "hash": "7147084424197937412"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/icons.tsx",
+          "hash": "4407090887604128027"
+        },
+        {
+          "file": "apps/client/src/components/dashboard/react_chart.tsx",
+          "hash": "12776026262169934564"
+        },
+        {
+          "file": "apps/client/src/components/fab/fab.tsx",
+          "hash": "269567449685716575"
+        },
+        {
+          "file": "apps/client/src/components/footer/footer.module.css",
+          "hash": "11992107301063406784"
+        },
+        {
+          "file": "apps/client/src/components/footer/footer.tsx",
+          "hash": "1107680097028735995"
+        },
+        {
+          "file": "apps/client/src/components/header/header.module.css",
+          "hash": "12813203057983875299"
+        },
+        {
+          "file": "apps/client/src/components/header/header.tsx",
+          "hash": "5465380763245092358"
+        },
+        {
+          "file": "apps/client/src/components/home/home.module.css",
+          "hash": "14275167288820828566"
+        },
+        {
+          "file": "apps/client/src/components/home/home.tsx",
+          "hash": "3176352355039502283"
+        },
+        {
+          "file": "apps/client/src/components/icons.tsx",
+          "hash": "10616543994339721785"
+        },
+        {
+          "file": "apps/client/src/components/inventory/inventory.module.css",
+          "hash": "18047130292334047165"
+        },
+        {
+          "file": "apps/client/src/components/inventory/inventory.tsx",
+          "hash": "9414911449109804808"
+        },
+        {
+          "file": "apps/client/src/components/invoice-details/invoice_details.module.css",
+          "hash": "1347407528969980455"
+        },
+        {
+          "file": "apps/client/src/components/invoice-details/invoice_details.tsx",
+          "hash": "16995729501005286472"
+        },
+        {
+          "file": "apps/client/src/components/invoice-details/payment_history.tsx",
+          "hash": "17660236314087461857"
+        },
+        {
+          "file": "apps/client/src/components/invoice/add_client.tsx",
+          "hash": "12531896357653897843"
+        },
+        {
+          "file": "apps/client/src/components/invoice/invoice.module.css",
+          "hash": "6719573778579071863"
+        },
+        {
+          "file": "apps/client/src/components/invoice/invoice.tsx",
+          "hash": "11353929346570240476"
+        },
+        {
+          "file": "apps/client/src/components/invoice/invoice_type.tsx",
+          "hash": "15071955750671781780"
+        },
+        {
+          "file": "apps/client/src/components/invoice/select_type.tsx",
+          "hash": "948502030589955068"
+        },
+        {
+          "file": "apps/client/src/components/login/field.tsx",
+          "hash": "12586934710471843034"
+        },
+        {
+          "file": "apps/client/src/components/login/google.tsx",
+          "hash": "5096947747323689150"
+        },
+        {
+          "file": "apps/client/src/components/login/icon.tsx",
+          "hash": "3106337853896399821"
+        },
+        {
+          "file": "apps/client/src/components/login/login.module.css",
+          "hash": "1744044084828026126"
+        },
+        {
+          "file": "apps/client/src/components/login/login.tsx",
+          "hash": "13254334434465633861"
+        },
+        {
+          "file": "apps/client/src/components/login/styles.js",
+          "hash": "4500271166550674687"
+        },
+        {
+          "file": "apps/client/src/components/nav-bar/nav_bar.tsx",
+          "hash": "11747968278893941273"
+        },
+        {
+          "file": "apps/client/src/components/password/forgot.tsx",
+          "hash": "14341216372703026247"
+        },
+        {
+          "file": "apps/client/src/components/password/password.module.css",
+          "hash": "6561709651242310465"
+        },
+        {
+          "file": "apps/client/src/components/password/reset.tsx",
+          "hash": "17121984532961052076"
+        },
+        {
+          "file": "apps/client/src/components/password/styles.ts",
+          "hash": "11961120423829747897"
+        },
+        {
+          "file": "apps/client/src/components/payments/add_payment.tsx",
+          "hash": "1843788708288613816"
+        },
+        {
+          "file": "apps/client/src/components/payments/date_picker.tsx",
+          "hash": "18162964731326558086"
+        },
+        {
+          "file": "apps/client/src/components/payments/modal.tsx",
+          "hash": "12686264438985981852"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/form.tsx",
+          "hash": "12499405004671001089"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/icon.tsx",
+          "hash": "9807193761006315423"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/input.tsx",
+          "hash": "5559789260490351511"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/profile.tsx",
+          "hash": "3753914097401347879"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/styles.tsx",
+          "hash": "9719294758854655409"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/uploader.module.css",
+          "hash": "15251048417241454827"
+        },
+        {
+          "file": "apps/client/src/components/settings/form/uploader.tsx",
+          "hash": "17096629326639461309"
+        },
+        {
+          "file": "apps/client/src/components/settings/settings.module.css",
+          "hash": "1944259379373376621"
+        },
+        {
+          "file": "apps/client/src/components/settings/settings.tsx",
+          "hash": "14715696158193076376"
+        },
+        {
+          "file": "apps/client/src/components/spinner/spinner.module.css",
+          "hash": "10796250552455623814"
+        },
+        {
+          "file": "apps/client/src/components/spinner/spinner.tsx",
+          "hash": "4095887341952916018"
+        },
+        {
+          "file": "apps/client/src/components/svg-icons/empty.tsx",
+          "hash": "3560431841677718203"
+        },
+        {
+          "file": "apps/client/src/components/svg-icons/no-data.tsx",
+          "hash": "15327818618851211912"
+        },
+        {
+          "file": "apps/client/src/currencies.json",
+          "hash": "7566981674813796331"
+        },
+        {
+          "file": "apps/client/src/index.css",
+          "hash": "3824264639773173578"
+        },
+        {
+          "file": "apps/client/src/initialState.ts",
+          "hash": "7937343355819525531"
+        },
+        {
+          "file": "apps/client/src/lib/utils.ts",
+          "hash": "6483145186850064023"
+        },
+        {
+          "file": "apps/client/src/main.tsx",
+          "hash": "5942655582622068650"
+        },
+        {
+          "file": "apps/client/src/reducers/auth.ts",
+          "hash": "14621033460917041221"
+        },
+        {
+          "file": "apps/client/src/reducers/clients.ts",
+          "hash": "589030989147610332"
+        },
+        {
+          "file": "apps/client/src/reducers/index.ts",
+          "hash": "16590114189000984590"
+        },
+        {
+          "file": "apps/client/src/reducers/inventory.ts",
+          "hash": "256244998864693284"
+        },
+        {
+          "file": "apps/client/src/reducers/invoices.ts",
+          "hash": "6712272871345269366"
+        },
+        {
+          "file": "apps/client/src/reducers/profiles.ts",
+          "hash": "3584869953827419727"
+        },
+        {
+          "file": "apps/client/src/store.ts",
+          "hash": "2076243763354071338"
+        },
+        {
+          "file": "apps/client/src/utils/utils.ts",
+          "hash": "5525427654350674876"
+        },
+        {
+          "file": "apps/client/src/vite-env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "apps/client/tailwind.config.js",
+          "hash": "6839156986100355787"
+        },
+        {
+          "file": "apps/client/tsconfig.app.json",
+          "hash": "14077292355205835216"
+        },
+        {
+          "file": "apps/client/tsconfig.json",
+          "hash": "1778611288216197132"
+        },
+        {
+          "file": "apps/client/tsconfig.node.json",
+          "hash": "3810366411942401755"
+        },
+        {
+          "file": "apps/client/vite.config.ts",
+          "hash": "16801919660375034201"
+        }
+      ]
+    }
+  }
+}

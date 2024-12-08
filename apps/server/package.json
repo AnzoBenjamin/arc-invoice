@@ -1,0 +1,43 @@
+{
+  "name": "@accountill/server",
+  "homepage": "accountill.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap --env.NODE_ENV production",
+    "serve": "node dist/index.cjs",
+    "watch-ts": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Anzo Benjamin",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.5.0",
+    "html-pdf": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.10",
+    "nodemailer": "^6.6.3",
+    "puppeteer": "^23.4.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.0",
+    "@types/nodemailer": "^6.4.16",
+    "concurrently": "^9.1.0",
+    "express": "^4.21.1",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  }
+}
