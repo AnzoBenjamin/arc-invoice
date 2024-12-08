@@ -19,7 +19,10 @@
     "prepare": "husky install",
     "cloc": "npx cloc --exclude-dir=node_modules,dist,build,package.lock.json,package.json,generated.tsx,.next,.nx .",
     "prepare-server": "npm install && npm run build --prefix apps/server",
+    "prepare-client": "npm install && npm run build --prefix apps/client",
+    "start-client": "npm run start --prefix apps/client",
     "start-server": "npm run serve --prefix apps/server"
+
   },
   "keywords": [],
   "author": "",
