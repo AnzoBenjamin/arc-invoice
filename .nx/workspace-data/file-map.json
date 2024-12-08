@@ -10,52 +10,32 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".idea/dbnavigator.xml",
-        "hash": "17400415271435727074"
-      },
-      {
-        "file": ".idea/git_toolbox_blame.xml",
-        "hash": "10563179705875868391"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "16039791304803713816"
-      },
-      {
-        "file": "docker-compose.prod.yml",
-        "hash": "8275532246584256634"
-      },
-      {
-        "file": "tsconfig.app.json",
-        "hash": "8127428634143631064"
-      },
-      {
-        "file": "nx.json",
-        "hash": "12320640051516242609"
+        "file": ".idea/modules.xml",
+        "hash": "8623372044132027957"
       },
       {
         "file": ".idea/nx-angular-config.xml",
         "hash": "11747644467998611843"
       },
       {
-        "file": ".gitignore",
-        "hash": "7663861978715868291"
+        "file": "docker-compose.prod.yml",
+        "hash": "8275532246584256634"
       },
       {
-        "file": ".idea/modules.xml",
-        "hash": "8623372044132027957"
+        "file": ".idea/dbnavigator.xml",
+        "hash": "17400415271435727074"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12320640051516242609"
+      },
+      {
+        "file": ".idea/git_toolbox_blame.xml",
+        "hash": "10563179705875868391"
       },
       {
         "file": ".idea/.gitignore",
         "hash": "10286036308014790964"
-      },
-      {
-        "file": ".idea/vcs.xml",
-        "hash": "14600148892634157659"
-      },
-      {
-        "file": ".idea/accountill.iml",
-        "hash": "2091662290190038625"
       },
       {
         "file": "package.json",
@@ -64,6 +44,26 @@
       {
         "file": "package-lock.json",
         "hash": "16574973706722489864"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "16039791304803713816"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "8127428634143631064"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "14600148892634157659"
+      },
+      {
+        "file": ".idea/accountill.iml",
+        "hash": "2091662290190038625"
       }
     ],
     "projectFileMap": {
@@ -205,7 +205,7 @@
         },
         {
           "file": "apps/client/src/App.tsx",
-          "hash": "16297903361136924431"
+          "hash": "7776274233472005233"
         },
         {
           "file": "apps/client/src/assets/react.svg",
