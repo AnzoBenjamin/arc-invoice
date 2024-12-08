@@ -3,7 +3,9 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
 const ProtectedRoute = () => {
   const location = useLocation();
-  const isAuthenticated = localStorage.getItem('token'); // Or your auth check method
+  const profile = localStorage.getItem('profile');
+  const parsedProfile = profile ? JSON.parse(profile) : null;
+  const isAuthenticated = parsedProfile.token; // Or your auth check method
 
   if (!isAuthenticated) {
     // Redirect to login page with return URL

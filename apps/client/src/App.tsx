@@ -21,7 +21,7 @@ import ClientList from "@/components/clients/client-list";
 import Forgot from "@/components/password/forgot";
 import Reset from "@/components/password/reset";
 import ProtectedRoute from "@/components/protected-route/protected-route";
-//import LoggedInRoute from "./components/logged-in-route/logged-in-route";
+import LoggedInRoute from "./components/logged-in-route/logged-in-route";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import ExpensePage from "./components/expenses/expenses";
 
@@ -42,10 +42,12 @@ export default function App() {
             <Header />
             <main className="flex-1 container mx-auto px-4 py-8">
               <Routes>
+                <Route element={<LoggedInRoute />}>
                   <Route path="/" element={<Home />} />
                   <Route path="/auth" element={<Login />} />
                   <Route path="/forgot-password" element={<Forgot />} />
                   <Route path="/reset-password/:token" element={<Reset />} />
+                </Route>
 
                 <Route element={<ProtectedRoute />}>
                   <Route path="/invoice" element={<Invoice />} />

@@ -5,7 +5,6 @@ import { InventoryItem } from '../types/inventory-types';
 import { InvoiceData } from '../types/invoice-types';
 import { UserCredentials } from '../types/user-types';
 import { Expense } from '../types/expense-types';
-// const API = axios.create({ baseURL: 'http://localhost:5000'})
 
 const API = axios.create({ baseURL: import.meta.env.VITE_API_URL})
 
