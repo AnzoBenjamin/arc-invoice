@@ -17,7 +17,9 @@
     "build": "npm run nx run-many -t build",
     "validate": "npm run format:write && npm run tsc && npm run lint && npm run build",
     "prepare": "husky install",
-    "cloc": "npx cloc --exclude-dir=node_modules,dist,build,package.lock.json,package.json,generated.tsx,.next,.nx ."
+    "cloc": "npx cloc --exclude-dir=node_modules,dist,build,package.lock.json,package.json,generated.tsx,.next,.nx .",
+    "prepare-server": "npm install && npm run build --prefix apps/server",
+    "start-server": "npm run serve --prefix apps/server"
   },
   "keywords": [],
   "author": "",
